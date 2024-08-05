@@ -7,7 +7,16 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-export class UserRegister {
+export class UserLogin {
+    login(user) {
+        return __awaiter(this, void 0, void 0, function* () {
+            sessionStorage.setItem('user', JSON.stringify(user));
+            alert(`iniciaste sesión como: ${user.email}`);
+            window.location.href = "../views/home.html";
+        });
+    }
+}
+export class LoginVerifications {
     verification(user) {
         const { email, password } = user;
         if (!email || !password) {
@@ -15,7 +24,7 @@ export class UserRegister {
         }
         return true;
     }
-    createUser(user, url) {
+    loginVerification(user, url) {
         return __awaiter(this, void 0, void 0, function* () {
             const response = yield fetch(url, {
                 method: "POST",
@@ -24,9 +33,9 @@ export class UserRegister {
                 },
                 body: JSON.stringify(user)
             });
-            window.location.href = "../views/login.html";
-            console.log(response);
-            alert('usuario registrado exitosamente');
+            const data = yield response.json();
+            console.log(data);
+            return true;
         });
     }
 }
