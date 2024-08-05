@@ -1,5 +1,4 @@
-import { IUserLogin } from "../models/login.model";
-import { IUserRegister } from "../models/register.model";
+import { ILoginResponse, IUserLogin } from "../models/login.model";
 
 export class UserLogin {
 
@@ -26,7 +25,7 @@ export class LoginVerifications {
         return true;
     }
 
-    async loginVerification (user : IUserLogin, url : string) : Promise<boolean> {
+    async loginVerification (user : IUserLogin, url : string) : Promise<ILoginResponse> {
 
         const response : Response = await fetch(url, {
             method: "POST",
@@ -36,10 +35,8 @@ export class LoginVerifications {
             body: JSON.stringify(user)
         });
 
-        const data = await response.json();
-
-        console.log(data);
-
-        return true;
+        const value : ILoginResponse = await response.json();
+        return value;
     }
 }
+

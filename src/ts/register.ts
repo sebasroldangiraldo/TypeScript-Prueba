@@ -40,3 +40,13 @@ const register = async () => {
     const register = new UserRegister;
     await register.createUser(newUser, url);
 }
+
+// {
+//     "email": "sroldang@gmail.com",
+//     "password": "sroldang-12345"
+// }
+
+// {
+//     "email": "correoprueba@gmail.com",
+//     "password": "correoprueba-12345"
+// }

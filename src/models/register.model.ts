@@ -3,3 +3,5 @@ export interface IUserRegister {
     password : string
 }
 
+
+

@@ -37,3 +37,11 @@ const register = () => __awaiter(void 0, void 0, void 0, function* () {
     const register = new UserRegister;
     yield register.createUser(newUser, url);
 });
+// {
+//     "email": "sroldang@gmail.com",
+//     "password": "sroldang-12345"
+// }
+// {
+//     "email": "correoprueba@gmail.com",
+//     "password": "correoprueba-12345"
+// }
