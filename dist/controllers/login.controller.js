@@ -33,9 +33,8 @@ export class LoginVerifications {
                 },
                 body: JSON.stringify(user)
             });
-            const data = yield response.json();
-            console.log(data);
-            return true;
+            const value = yield response.json();
+            return value;
         });
     }
 }

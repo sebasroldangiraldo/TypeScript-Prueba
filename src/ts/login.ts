@@ -27,8 +27,9 @@ const verification = async () => {
         return;
     }
 
-    await verification.loginVerification(newUser, url);
-    
+    const value = await verification.loginVerification(newUser, url);
+    console.log(value);
+
     loginUser();
 }
 

@@ -27,7 +27,8 @@ const verification = () => __awaiter(void 0, void 0, void 0, function* () {
         alert('por favor, completa todos los campos');
         return;
     }
-    yield verification.loginVerification(newUser, url);
+    const value = yield verification.loginVerification(newUser, url);
+    console.log(value);
     loginUser();
 });
 const loginUser = () => {
