@@ -38,5 +38,5 @@ const register = async () => {
     }
 
     const register = new UserRegister;
-    await register.createUser(newUser, url)
+    await register.createUser(newUser, url);
 }

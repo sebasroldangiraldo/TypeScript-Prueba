@@ -70,3 +70,7 @@ main h3 {
 #register-form input, button {
     font-family: var(--font-principal);
 }
+
+#login-form input, button {
+    font-family: var(--font-principal);
+}

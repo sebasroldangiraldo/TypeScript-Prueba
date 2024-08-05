@@ -9,7 +9,7 @@ export class UserRegister {
         if (!email || !password) {
             return false;
         }
-        
+
         return true;
     }
 
@@ -24,7 +24,7 @@ export class UserRegister {
             body: JSON.stringify(user)
         });
 
-        // window.location.href = "../views/login.html"
+        window.location.href = "../views/login.html"
 
         console.log(response);
 
